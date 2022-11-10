@@ -12,12 +12,18 @@ body {
 header {
   font-size: 1.5rem;
 }
+header h1 {
+  text-align: center;
+}
 header,
 form {
   min-height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+input-container {
+  display: flex;
 }
 form input {
   outline: none;
@@ -115,4 +121,28 @@ select {
 .select:hover::after {
   background: white;
   color: #ff6f47;
+}
+
+@media screen and (max-width: 800px) {
+  form {
+    flex-direction: column-reverse;
+  }
+  .input-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .input-container input {
+    max-width: 75%;
+  }
+
+  .todo-list {
+    margin-top: 1rem;
+  }
+
+  .todo-list .todo {
+    width: 200px;
+  }
 }
